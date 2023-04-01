@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.popup {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.popup h3 {
+    font-size: 28px;
+    font-weight: bolder;
+    color: #F44708;
+}
+.popup .flex {
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+    column-gap: 20px;
+}
+.popup .flex button {
+    border: 1px solid #F44708;
+    padding: 10px 20px;
+    background-color: #F44708;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 25px;
+    color: white;
+}
+.popup .modalCentro {
+    background-color: #F44708;
+    padding: 20px 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(.5);
+    transition: .5s;
+    box-shadow: 0 0 0 500vmax rgba(0,0,0,0.4);
+}
+.popup .modalCentro.active {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+.popup .modalCentro button {
+    border: 1px solid #F44708;
+    padding: 10px 20px;
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: 500;
+    color: #F44708;
+}
+.popup .modalDerecha{
+    text-align: center;
+    background-color: #F44708;
+    width: 30%;
+    padding: 20px 30px;
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+    box-shadow: 0 0 0 500vmax rgba(0,0,0,0.4);
+    transition: .5s;
+}
+.popup .modalDerecha.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+.popup .modalDerecha h3,
+.popup .modalCentro h3,
+.popup .modalDerecha p,
+.popup .modalCentro p{
+    color: white;
+}
+.popup .modalDerecha button, 
+.popup .modalCentro button
+{
+    border: 2px solid white;
+    border-radius: 25px;
+    padding: 10px 20px;
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: 500;
+    color: #E0EEC6;
+}
+.popup .btnDarkMode {
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid #F44708;
+    border-radius: 25px;
+    color: #F44708;
+    font-weight: bolder;
+}
+.darkMode {
+    background-color: #040F16;
+    color: white;
+}
