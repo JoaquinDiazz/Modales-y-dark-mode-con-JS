@@ -38,6 +38,7 @@ body {
     font-weight: 500;
     border-radius: 25px;
     color: white;
+    min-width: 220px;
 }
 .popup .modalCentro {
     background-color: #F44708;
@@ -122,6 +123,7 @@ body {
     border-radius: 25px;
     color: #F44708;
     font-weight: bolder;
+    min-width: 220px;
 }
 .darkMode {
     background-color: #040F16;
